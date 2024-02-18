@@ -14,7 +14,7 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
-
+import os
 LOGGER = get_logger(__name__)
 
 
@@ -44,6 +44,10 @@ def run():
           Dataset](https://github.com/streamlit/demo-self-driving)
         - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
     """
+    )
+
+    st.markdown(
+        f"""Secret key: {os.getenv("SECRET_KEY")}"""
     )
 
 
